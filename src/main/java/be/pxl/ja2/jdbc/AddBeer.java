@@ -18,12 +18,6 @@ public class AddBeer
 		try {
 			sql = "INSERT INTO Beers (BrewerId, Name, CategoryId, Alcohol, Price, Stock) " +
 					"VALUES ('"+brewerId+"', '"+name+"', '"+categoryId+"', '"+alcohol+"', '"+price+"', '"+stock+"')";
-//			sql = String.format("INSERT INTO Beers (BrewerId, Name, CategoryId, Alcohol, Price, Stock) " +
-//							"VALUES (%d, %s, %d, %.2f, %.2f, %d)", Integer.parseInt(args[0]), args[1],
-//					Integer.parseInt(args[2]), Float.parseFloat(args[3]), Float.parseFloat(args[4]),
-//					Integer.parseInt(args[5]));
-//			sql = "INSERT INTO Beers (BrewerId, Name, CategoryId, Alcohol, Price, Stock) " +
-//							"VALUES (6, 'My Beer', 12, 5.0, 2.3, 50)";
 		} catch (Exception e) {
 			System.out.println("Something went wrong: " + e.getMessage());
 		}
@@ -41,7 +35,7 @@ public class AddBeer
 		}
 		catch (SQLException e)
 		{
-			e.printStackTrace();
+			System.out.println("Something went wrong: " + e.getMessage());
 		}
 
 	}
